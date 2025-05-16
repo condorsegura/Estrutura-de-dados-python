@@ -1,0 +1,19 @@
+# Função de busca em lista com alocação contígua
+# Parâmetros:
+# - K: O valor a ser buscado na lista.
+# - L: A lista onde será realizada a busca.
+# - n: O tamanho da lista (número de elementos).
+# Retorno:
+# - Retorna o índice do elemento K na lista L, se encontrado.
+# - Retorna -1 se o elemento K não estiver presente na lista.
+def buscaLista(K, L, n):
+    i = 0  # Inicializa o índice de busca.
+    indiceL = -1  # Inicializa o índice de retorno como -1 (não encontrado).
+    while i < n:  # Itera sobre a lista até o tamanho n.
+        if L[i] == K:  # Verifica se o elemento atual é igual a K.
+            indiceL = i  # Atualiza o índice de retorno com o índice atual.
+            i = n + 1  # Sai do loop antecipadamente.
+        i = i + 1  # Incrementa o índice para continuar a busca.
+    return indiceL  # Retorna o índice encontrado ou -1 se não encontrado.
+
+# Função de lista em localização não contígua
